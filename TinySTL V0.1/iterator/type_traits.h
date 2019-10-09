@@ -1,6 +1,6 @@
 
-#ifndef TYPE_TRAITS
-#define TYPE_TRAITS
+#ifndef _TINYSTL_TYPE_TRAITS
+#define _TINYSTL_TYPE_TRAITS
 
 struct __true_type {};
 struct __false_type {};
@@ -19,6 +19,7 @@ struct __type_traits
   typedef __false_type has_trivial_default_constructor;
   typedef __false_type has_trivial_constructor;
   typedef __false_type has_trivial_destructor;
+  typedef __false_type is_POD_type;
 };
 
 template<> struct __type_traits<bool>
@@ -26,6 +27,7 @@ template<> struct __type_traits<bool>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<char>
@@ -33,6 +35,7 @@ template<> struct __type_traits<char>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<unsigned char>
@@ -40,6 +43,7 @@ template<> struct __type_traits<unsigned char>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<signed char>
@@ -47,6 +51,7 @@ template<> struct __type_traits<signed char>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<short>
@@ -54,6 +59,7 @@ template<> struct __type_traits<short>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<unsigned short>
@@ -61,6 +67,7 @@ template<> struct __type_traits<unsigned short>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<int>
@@ -68,6 +75,7 @@ template<> struct __type_traits<int>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<unsigned int>
@@ -75,6 +83,7 @@ template<> struct __type_traits<unsigned int>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<long>
@@ -82,6 +91,7 @@ template<> struct __type_traits<long>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<unsigned long>
@@ -89,6 +99,7 @@ template<> struct __type_traits<unsigned long>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<long long>
@@ -96,6 +107,7 @@ template<> struct __type_traits<long long>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<unsigned long long>
@@ -103,6 +115,7 @@ template<> struct __type_traits<unsigned long long>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<float>
@@ -110,6 +123,7 @@ template<> struct __type_traits<float>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<double>
@@ -117,6 +131,7 @@ template<> struct __type_traits<double>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<> struct __type_traits<long double>
@@ -124,6 +139,7 @@ template<> struct __type_traits<long double>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
 template<typename _Tp>
@@ -132,6 +148,7 @@ struct __type_traits<_Tp*>
   typedef __true_type has_trivial_default_constructor;
   typedef __true_type has_trivial_constructor;
   typedef __true_type has_trivial_destructor;
+  typedef __true_type is_POD_type;
 };
 
-#endif  /* TYPE_TRAITS */
+#endif  /* _TINYSTL_TYPE_TRAITS */
